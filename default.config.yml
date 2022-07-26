@@ -1,0 +1,5 @@
+---
+downloads: ~/.ansible-downloads/
+
+homebrew_installed_packages:
+  - balena-cli
