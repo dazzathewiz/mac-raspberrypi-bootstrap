@@ -3,3 +3,6 @@ downloads: ~/.ansible-downloads/
 
 homebrew_installed_packages:
   - balena-cli
+
+# Raspberry Pi image URLs
+dietpi: https://dietpi.com/downloads/images/DietPi_RPi-ARMv6-Bullseye.7z

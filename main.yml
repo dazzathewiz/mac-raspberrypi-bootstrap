@@ -7,3 +7,11 @@
   roles:
     - role: geerlingguy.mac.homebrew
       tags: ['homebrew']
+  
+  vars_prompt:
+    - name: "disk"
+      prompt: "Please enter the path to SDCard Disk device EG: /dev/disk4. Use `diskutil list` to determine the right disk"
+      private: no
+  
+  tasks:
+    - import_tasks: tasks/dietpi.yml
