@@ -11,7 +11,7 @@ Note: the playbook ensure homebrew is installed on the Mac to manage packages.
     2. Run `ansible-playbook main.yml --ask-become-pass` inside this directory. Enter your macOS account password when prompted for the 'BECOME' password.
 
 
-## Configuratio Defaults
+## Configuration Defaults
 
 defaults.config.yml contains the settings variables for bootstrapping.
 
