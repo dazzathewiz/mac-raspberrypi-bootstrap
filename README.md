@@ -14,6 +14,8 @@ Note: the playbook ensure homebrew is installed on the Mac to manage packages.
 ## Configuratio Defaults
 
 defaults.config.yml contains the settings variables for bootstrapping.
+files/dietpi/dietpi.txt contains dietpi autosetup configuration, see: https://dietpi.com/docs/usage/#how-to-do-an-automatic-base-installation-at-first-boot-dietpi-automation
+
 
 References used in development:
 https://github.com/geerlingguy/mac-dev-playbook
@@ -21,4 +23,4 @@ https://galaxy.ansible.com/geerlingguy/mac
 https://formulae.brew.sh/formula/balena-cli
 https://github.com/balena-io/balena-cli
 https://forums.balena.io/t/command-line-option/7171/8
-https://dietpi.com/docs/usage/#how-to-do-an-automatic-base-installation-at-first-boot-dietpi-automation
+

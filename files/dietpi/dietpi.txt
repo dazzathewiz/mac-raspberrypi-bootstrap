@@ -76,7 +76,9 @@ AUTO_SETUP_BACKUP_RESTORE=0
 
 ##### Software options #####
 # SSH server choice: 0=none/custom | -1=Dropbear | -2=OpenSSH
-AUTO_SETUP_SSH_SERVER_INDEX=-1
+
+# Change to OpenSSH to support Ansible configuration (OpenSSH includes SCP and SFTP which Ansible uses)
+AUTO_SETUP_SSH_SERVER_INDEX=-2
 
 # SSH server pubkey
 # - Public key(s) for "root" and "dietpi" users, which will be added to ~/.ssh/authorized_keys
@@ -129,6 +131,9 @@ AUTO_SETUP_GLOBAL_PASSWORD=dietpi
 # - DietPi will automatically install all dependencies, like ALSA/X11 for desktops etc.
 # - E.g. the following (without the leading "#") will install the LXDE desktop automatically on first boot:
 #AUTO_SETUP_INSTALL_SOFTWARE_ID=23
+
+# Python 3 pip to support Ansible
+AUTO_SETUP_INSTALL_SOFTWARE_ID=130
 
 #------------------------------------------------------------------------------------------------------
 ##### Misc DietPi program settings #####
