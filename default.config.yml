@@ -1,8 +1,13 @@
 ---
 downloads: ~/.ansible-downloads/
 
+# https://dietpi.com/forum/t/choosing-the-right-version/14874
+arm_version: v8   # All other RPi (Zero 2 W, 2 Mod. B v1.2, every RPi 3 and the RPi 4)
+#arm_version: v7    # RPi 2 mod B is ARMv7
+#arm_version: v6    # RPi 1 and Zero / Zero W/WH
+
 homebrew_installed_packages:
   - balena-cli
 
 # Raspberry Pi image URLs
-dietpi: https://dietpi.com/downloads/images/DietPi_RPi-ARMv6-Bullseye.7z
+dietpi: "https://dietpi.com/downloads/images/DietPi_RPi-ARM{{ arm_version }}-Bullseye.7z"
