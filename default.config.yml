@@ -18,6 +18,7 @@ debian_version: Bookworm
 
 homebrew_installed_packages:
   - balena-cli
+  - unar
 
 # Raspberry Pi image URLs
-dietpi: "https://dietpi.com/downloads/images/DietPi_RPi{{ rpi }}-ARM{{ arm_version }}-{{ debian_version }}.7z"
+dietpi: "https://dietpi.com/downloads/images/DietPi_RPi{{ rpi }}-ARM{{ arm_version }}-{{ debian_version }}.img.xz"

@@ -8,12 +8,11 @@
 - name: Download dietpi image "{{ dietpi }}"
   get_url:
     url: "{{ dietpi }}"
-    dest: "~/.dietpi/dietpi.7z"
+    dest: "~/.dietpi/dietpi.img.xz"
 
-# Note ansible unarchive doesn't handle .7z on mac (gtar not GNU tar or something)
 - name: Extract dietpi download to ~/.dietpi/
   shell:
-    cmd: tar -xf ~/.dietpi/dietpi.7z
+    cmd: unar ~/.dietpi/dietpi.img.xz
     chdir: ~/.dietpi/
 
 - name: Get dietpi image filename
@@ -21,6 +20,10 @@
     paths: "~/.dietpi/"
     patterns: "*.img"
   register: image_files
+
+- name: Print the img filename
+  debug:
+    msg: "DietPi image file found: {{ image_files.files[0].path }}"
 
 - name: Flash SD card `balena local flash {{ image_files.files[0].path }} --drive {{ disk }} --yes`
   become: yes
