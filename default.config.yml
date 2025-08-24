@@ -6,8 +6,18 @@ arm_version: v8   # All other RPi (Zero 2 W, 2 Mod. B v1.2, every RPi 3 and the 
 #arm_version: v7    # RPi 2 mod B is ARMv7
 #arm_version: v6    # RPi 1 and Zero / Zero W/WH
 
+# Raspberry Pi Versions, based on DietPi image naming
+#rpi: "234"  # Raspberry Pi 2/3/4/Zero 2
+#rpi: "1"    # Raspberry Pi 1/Zero
+rpi: "5"    # Raspberry Pi 5
+
+
+# https://en.wikipedia.org/wiki/Debian_version_history
+debian_version: Bookworm
+#debian_version: Bullseye
+
 homebrew_installed_packages:
   - balena-cli
 
 # Raspberry Pi image URLs
-dietpi: "https://dietpi.com/downloads/images/DietPi_RPi-ARM{{ arm_version }}-Bullseye.7z"
+dietpi: "https://dietpi.com/downloads/images/DietPi_RPi{{ rpi }}-ARM{{ arm_version }}-{{ debian_version }}.7z"
